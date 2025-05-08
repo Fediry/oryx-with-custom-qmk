@@ -7,3 +7,10 @@
 
 #define RGB_MATRIX_STARTUP_SPD 60
 
+
+
+
+
+
+// My Additions
+#define CHORDAL_HOLD
