@@ -16,7 +16,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_UNDS,        KC_Q,           KC_W,           KC_F,           KC_P,           KC_B,           KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_J,           KC_L,           KC_U,           KC_Y,           KC_SCLN,        KC_BSLS,        
     MT(MOD_LSFT, KC_BSPC),MT(MOD_LCTL, KC_A),MT(MOD_LALT, KC_R),MT(MOD_LGUI, KC_S),LT(3,KC_T),     KC_G,           CW_TOGG,                                                                        CW_TOGG,        KC_M,           LT(3,KC_N),     MT(MOD_RGUI, KC_E),MT(MOD_RALT, KC_I),MT(MOD_RCTL, KC_O),MT(MOD_RSFT, KC_DELETE),
     KC_LEFT_SHIFT,  KC_Z,           KC_X,           KC_C,           LT(2,KC_D),     KC_V,                                           KC_K,           KC_H,           KC_COMMA,       KC_DOT,         KC_SLASH,       MT(MOD_RSFT, KC_QUOTE),
-    KC_LEFT_CTRL,   KC_LEFT_ALT,    KC_LEFT_GUI,    KC_TRANSPARENT, KC_TRANSPARENT, MT(MOD_LALT, KC_ESCAPE),                                                                                                MT(MOD_RALT, KC_PSCR),KC_TRANSPARENT, KC_TRANSPARENT, KC_RIGHT_GUI,   KC_RIGHT_ALT,   KC_RIGHT_CTRL,  
+    KC_LEFT_CTRL,   KC_LEFT_ALT,    KC_LEFT_GUI,    KC_TRANSPARENT, QK_REPEAT_KEY, MT(MOD_LALT, KC_ESCAPE),                                                                                                MT(MOD_RALT, KC_PSCR),QK_REPEAT_KEY, KC_TRANSPARENT, KC_RIGHT_GUI,   KC_RIGHT_ALT,   KC_RIGHT_CTRL,
     LT(1,KC_SPACE), KC_TAB,         KC_LEFT_CTRL,                   KC_LEFT_CTRL,   KC_MEDIA_PLAY_PAUSE,LT(1,KC_ENTER)
   ),
   [1] = LAYOUT_moonlander(
@@ -141,3 +141,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 
 
+
+// My additions
+const char chordal_hold_layout[MATRIX_ROWS][MATRIX_COLS] PROGMEM =
+  LAYOUT(
+    'L', 'L', 'L', 'L', 'L', 'L',   'R', 'R', 'R', 'R', 'R', 'R',
+    'L', 'L', 'L', 'L', 'L', 'L',   'R', 'R', 'R', 'R', 'R', 'R',
+    'L', 'L', 'L', 'L', 'L', 'L',   'R', 'R', 'R', 'R', 'R', 'R',
+                   'L', 'L', 'L',   'R', 'R', 'R'
+  );
